@@ -58,4 +58,4 @@ footer{padding:42px 0;border-top:1px solid #eee;background:#fafafa}
 footer p{margin:5px 0;color:#666}
 footer small{color:#777}
 @media(max-width:850px){.menu{display:none}.hero{padding:60px 0}.hero-grid{grid-template-columns:1fr;gap:40px}.hero h1{font-size:58px}.subtitle{font-size:19px}.cards,.video-grid{grid-template-columns:1fr}.topics{grid-template-columns:1fr}.cta-inner,.footer-grid{display:block}.cta .actions{margin-top:10px}}
-@media(max-width:480px){.nav{min-height:62px}.brand{font-size:11px}.hero h1{font-size:50px;letter-spacing:-2px}.section{padding:65px 0}.cover img{width:280px}.btn{width:100%;text-align:center}}
+@media(max-width:480px){.nav{min-height:62px}.brand{font-size:11px}.hero h1{font-size:50px;letter-spacing:-2px}.section{padding:65px 0}.cover img{width:210px}.btn{width:100%;text-align:center}}
