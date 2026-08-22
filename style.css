@@ -59,3 +59,200 @@ footer p{margin:5px 0;color:#666}
 footer small{color:#777}
 @media(max-width:850px){.menu{display:none}.hero{padding:60px 0}.hero-grid{grid-template-columns:1fr;gap:40px}.hero h1{font-size:58px}.subtitle{font-size:19px}.cards,.video-grid{grid-template-columns:1fr}.topics{grid-template-columns:1fr}.cta-inner,.footer-grid{display:block}.cta .actions{margin-top:10px}}
 @media(max-width:480px){.nav{min-height:62px}.brand{font-size:11px}.hero h1{font-size:30px;letter-spacing:-2px}.section{padding:65px 0}.cover img{width:210px}.btn{width:100%;text-align:center}}
+
+
+
+/* ===== A VOZ DOS MOTORISTAS ===== */
+.voz-motoristas {
+  padding: 80px 20px;
+  background: #f6f6f6;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.voz-motoristas .container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.voz-header {
+  max-width: 820px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.voz-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.voz-header h2 {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.1;
+}
+
+.voz-header p {
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.voz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.voz-card {
+  position: relative;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.05);
+}
+
+.voz-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: #171717;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.voz-card h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.voz-card p {
+  margin: 0 0 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.voz-card label {
+  display: block;
+  padding: 9px 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.voz-card label:hover {
+  background: #f2f2f2;
+}
+
+.voz-card input[type="radio"],
+.voz-card input[type="checkbox"] {
+  margin-right: 9px;
+}
+
+.voz-relato {
+  grid-column: 1 / -1;
+}
+
+.voz-relato textarea {
+  width: 100%;
+  min-height: 140px;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  resize: vertical;
+  font: inherit;
+  line-height: 1.5;
+}
+
+.voz-relato textarea:focus {
+  outline: 2px solid #171717;
+  outline-offset: 1px;
+}
+
+.voz-relato .consentimento {
+  margin-top: 12px;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+.voz-cta {
+  max-width: 820px;
+  margin: 34px auto 0;
+  padding: 32px;
+  text-align: center;
+  background: #171717;
+  color: #fff;
+  border-radius: 14px;
+}
+
+.voz-cta h3 {
+  margin: 0 0 10px;
+  font-size: 25px;
+}
+
+.voz-cta p {
+  margin: 0 auto 22px;
+  max-width: 650px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.voz-botao {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 8px;
+  background: #fff;
+  color: #171717;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.voz-botao:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
+.voz-cta small {
+  display: block;
+  max-width: 680px;
+  margin: 20px auto 0;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .voz-motoristas {
+    padding: 55px 16px;
+  }
+
+  .voz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voz-relato {
+    grid-column: auto;
+  }
+
+  .voz-card {
+    padding: 22px;
+  }
+
+  .voz-cta {
+    padding: 26px 20px;
+  }
+}
+
