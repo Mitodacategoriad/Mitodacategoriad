@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head><style>
+/* Marca d'água do site */
+.marca-dagua {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 280px;
+    max-width: 30vw;
+    opacity: 0.10;
+    z-index: 999;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Em celulares */
+@media (max-width: 600px) {
+    .marca-dagua {
+        width: 180px;
+        max-width: 40vw;
+        right: 10px;
+        bottom: 10px;
+        opacity: 0.08;
+    }
+}
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O Mito da Categoria D | Informação para motoristas</title>
