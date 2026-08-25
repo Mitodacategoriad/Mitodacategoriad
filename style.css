@@ -2,7 +2,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#171717;background:#fff;line-height:1.65}
 a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
+.container{width:min(2000px,92%);margin:auto}
 header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #eee;z-index:10}
 .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{font-weight:900;color:#111;font-size:14px;letter-spacing:.7px}
