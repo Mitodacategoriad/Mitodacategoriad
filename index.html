@@ -1,4 +1,257 @@
-<div
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mito da Categoria D</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+    }
+
+    /* ÁREA DA ANIMAÇÃO */
+    .animacao-cde {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .titulo-animacao {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .subtitulo-animacao {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    /* LINHA C - D - E */
+    .categorias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .categoria {
+      width: 250px;
+      min-height: 250px;
+      padding: 15px;
+      border-radius: 18px;
+      background: #f5f5f5;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    .categoria img {
+      width: 100%;
+      max-width: 210px;
+      height: 150px;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+    }
+
+    .categoria h2 {
+      margin: 10px 0 5px;
+      font-size: 30px;
+    }
+
+    .categoria p {
+      margin: 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* ANIMAÇÃO C */
+    .categoria-c {
+      animation: entrarC 1.2s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    /* ANIMAÇÃO D */
+    .categoria-d {
+      animation: entrarD 1.2s ease forwards;
+      animation-delay: 2s;
+    }
+
+    /* ANIMAÇÃO E */
+    .categoria-e {
+      animation: entrarE 1.2s ease forwards;
+      animation-delay: 3.5s;
+    }
+
+    @keyframes entrarC {
+      from {
+        opacity: 0;
+        transform: translateX(-250px) scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    @keyframes entrarD {
+      from {
+        opacity: 0;
+        transform: translateX(250px) scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+
+    @keyframes entrarE {
+      from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* DESTAQUE DA CATEGORIA D */
+    .categoria-d {
+      border: 3px solid #222;
+    }
+
+    /* FRASE FINAL */
+    .frase-final {
+      margin-top: 30px;
+      font-size: 21px;
+      font-weight: bold;
+      color: #222;
+
+      opacity: 0;
+      animation: aparecerFrase 1s ease forwards;
+      animation-delay: 5s;
+    }
+
+    @keyframes aparecerFrase {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CELULAR */
+    @media (max-width: 700px) {
+
+      .titulo-animacao {
+        font-size: 23px;
+      }
+
+      .categorias {
+        flex-direction: column;
+      }
+
+      .categoria {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .categoria img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="animacao-cde">
+
+    <div class="titulo-animacao">
+      Evolução das Categorias
+    </div>
+
+    <div class="subtitulo-animacao">
+      Conheça a sequência para sua habilitação
+    </div>
+
+    <div class="categorias">
+
+      <!-- CATEGORIA C -->
+      <div class="categoria categoria-c">
+
+        <!-- TROQUE PELO NOME DA SUA IMAGEM -->
+        <img src="caminhao.png" alt="Caminhão - Categoria C">
+
+        <h2>Categoria C</h2>
+
+        <p>Veículos de carga</p>
+
+      </div>
+
+
+      <!-- CATEGORIA D -->
+      <div class="categoria categoria-d">
+
+        <!-- TROQUE PELO NOME DA SUA IMAGEM -->
+        <img src="onibus.png" alt="Ônibus - Categoria D">
+
+        <h2>Categoria D</h2>
+
+        <p>Veículos para transporte de passageiros</p>
+
+      </div>
+
+
+      <!-- CATEGORIA E -->
+      <div class="categoria categoria-e">
+
+        <!-- TROQUE PELO NOME DA SUA IMAGEM -->
+        <img src="carreta.png" alt="Carreta - Categoria E">
+
+        <h2>Categoria E</h2>
+
+        <p>Veículos articulados e combinações</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="frase-final">
+      C → D → E
+      <br>
+      Da Categoria C à Categoria E — evolua sua habilitação.
+    </div>
+
+  </section>
+
+</body>
+</html><div
 </div><!DOCTYPE html>
 <html lang="pt-BR">
 <head><style>
