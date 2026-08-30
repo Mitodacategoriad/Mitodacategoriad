@@ -3,711 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mito da Categoria D</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-    }
-
-    /* ÁREA DA ANIMAÇÃO */
-    .animacao-bcde {
-      width: 100%;
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 20px;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .titulo-animacao {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #222;
-    }
-
-    .subtitulo-animacao {
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 30px;
-    }
-
-    /* CATEGORIAS */
-    .categorias {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .categoria {
-      width: 250px;
-      min-height: 250px;
-      padding: 15px;
-      border-radius: 18px;
-      background: #f5f5f5;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-
-      opacity: 0;
-    }
-
-    .categoria img {
-      width: 100%;
-      max-width: 210px;
-      height: 140px;
-      object-fit: contain;
-      display: block;
-      margin: auto;
-    }
-
-    .categoria h2 {
-      margin: 10px 0 5px;
-      font-size: 30px;
-      color: #222;
-    }
-
-    .categoria p {
-      margin: 0;
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* -------------------------
-       ANIMAÇÃO B
-       ------------------------- */
-    .categoria-b {
-      animation: entrarB 1s ease forwards;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes entrarB {
-      from {
-        opacity: 0;
-        transform: translateX(-250px) scale(0.7);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    /* -------------------------
-       ANIMAÇÃO C
-       ------------------------- */
-    .categoria-c {
-      animation: entrarC 1s ease forwards;
-      animation-delay: 1.8s;
-      
-      border: 3px solid #222;
-    }
-
-    @keyframes entrarC {
-      from {
-        opacity: 0;
-        transform: translateY(-100px) scale(0.7);      
-      
-
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    /* -------------------------
-       ANIMAÇÃO D
-       ------------------------- */
-    .categoria-d {
-      animation: entrarD 1s ease forwards;
-      animation-delay: 3.1s;
-
-      }
-
-    @keyframes entrarD {
-      from {
-        opacity: 0;
-        transform: scale(0.5);
-      }
- 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* -------------------------
-       ANIMAÇÃO E
-       ------------------------- */
-    .categoria-e {
-      animation: entrarE 1s ease forwards;
-      animation-delay: 4.4s;
-    }
-
-    @keyframes entrarE {
-      from {
-        opacity: 0;
-        transform: translateX(250px) scale(0.7);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    /* -------------------------
-       FRASE FINAL
-       ------------------------- */
-    .frase-final {
-      margin-top: 30px;
-      font-size: 21px;
-      font-weight: bold;
-      color: #222;
-
-      opacity: 0;
-
-      animation: aparecerFrase 1s ease forwards;
-      animation-delay: 5.8s;
-    }
-
-    @keyframes aparecerFrase {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* -------------------------
-       CELULAR
-       ------------------------- */
-    @media (max-width: 700px) {
-
-      .titulo-animacao {
-        font-size: 23px;
-      }
-
-      .subtitulo-animacao {
-        font-size: 14px;
-      }
-
-      .categorias {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .categoria {
-        width: 90%;
-        max-width: 300px;
-      }
-
-      .categoria img {
-        height: 135px;
-      }
-    }
-  </style>
+  <meta name="description" content="Mito da Categoria D: informação, reflexão e valorização de quem busca evoluir profissionalmente no transporte, com destaque para a Categoria C.">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="Mito da Categoria D | A realidade por trás da Categoria C">
+  <meta property="og:description" content="Um projeto de informação, reflexão e valorização dos profissionais do transporte.">
+  <meta property="og:type" content="website">
+  <title>Mito da Categoria D | A realidade por trás da Categoria C</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <img src="marca-dagua.png" alt="" class="marca-dagua" aria-hidden="true">
 
-  <section class="animacao-bcde">
-
-    <div class="titulo-animacao">
-      Evolução das Categorias
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Mito da Categoria D - início">MITO DA CATEGORIA D</a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#projeto">O projeto</a>
+        <a href="#categoria-c">Categoria C</a>
+        <a href="#mitos">Mito x realidade</a>
+        <a href="#ebook">eBook</a>
+        <a href="#voz">Pesquisa</a>
+      </nav>
+      <a class="btn btn-small" href="#ebook">Conheça o eBook</a>
     </div>
+  </header>
 
-    <div class="subtitulo-animacao">
-      Da Categoria B à Categoria E
-    </div>
-
-
-    <div class="categorias">
-
-      <!-- ======================
-           CATEGORIA B
-           ====================== -->
-      <div class="categoria categoria-b">
-
-        <img src="Carro.png"
-             alt="Carro - Categoria B">
-
-        <h2>Categoria B</h2>
-
-        <p>Automóveis e veículos leves-18 Anos</p>
-
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Informação • Formação • Valorização</p>
+          <h1>Mito da <span>Categoria D</span></h1>
+          <p class="subtitle">Um projeto para olhar além da habilitação e mostrar a realidade, os desafios e as oportunidades de quem busca crescer no transporte — com a <strong>Categoria C</strong> no centro dessa conversa.</p>
+          <div class="actions">
+            <a class="btn" href="#categoria-c">Conheça a Categoria C</a>
+            <a class="btn btn-outline" href="#ebook">Ler o eBook</a>
+          </div>
+          <p class="hero-note">O nome do projeto permanece como identidade, mas o conteúdo desta nova versão coloca a Categoria C em evidência.</p>
+        </div>
+        <div class="cover">
+          <img src="logo.png" alt="Logo do projeto Mito da Categoria D">
+        </div>
       </div>
+    </section>
 
+    <!-- PROJETO -->
+    <section class="section" id="projeto">
+      <div class="container">
+        <p class="eyebrow">O projeto</p>
+        <h2>Por que falar sobre a realidade por trás das categorias?</h2>
+        <p>Mais do que decorar regras, é importante entender o caminho profissional, as exigências, as dificuldades e as expectativas de quem pretende evoluir na habilitação.</p>
 
-      <!-- ======================
-           CATEGORIA C
-           ====================== -->
-      <div class="categoria categoria-c">
-
-        <img src="Caminhão.png"
-             alt="Caminhão - Categoria C">
-
-        <h2>Categoria C</h2>
-
-        <p>Veículos de carga-01 Ano de B</p>
-
+        <div class="cards">
+          <article>
+            <div class="icon">🚛</div>
+            <h3>Informação</h3>
+            <p>Organizar informações de forma simples para ajudar quem está planejando sua evolução profissional.</p>
+          </article>
+          <article>
+            <div class="icon">🎯</div>
+            <h3>Realidade</h3>
+            <p>Separar expectativas de fatos e estimular uma visão mais consciente sobre o mercado de transporte.</p>
+          </article>
+          <article>
+            <div class="icon">🤝</div>
+            <h3>Valorização</h3>
+            <p>Dar espaço para experiências, dificuldades e opiniões de motoristas e profissionais do setor.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
+    <!-- CATEGORIA C -->
+    <section class="section light" id="categoria-c">
+      <div class="container">
+        <p class="eyebrow">Destaque do projeto</p>
+        <h2>Categoria C: mais do que uma mudança na CNH</h2>
+        <p>A evolução para veículos de carga representa uma mudança importante para quem deseja atuar ou crescer profissionalmente no transporte. O objetivo aqui é explicar o caminho sem criar falsas promessas.</p>
 
-      <!-- ======================
-           CATEGORIA D
-           ====================== -->
-      <div class="categoria categoria-d">
+        <div class="cards">
+          <article>
+            <img src="Caminhão.png" alt="Caminhão representando a Categoria C" style="width:100%;height:150px;object-fit:contain;">
+            <h3>Veículos de carga</h3>
+            <p>A Categoria C está relacionada à condução de veículos destinados ao transporte de carga dentro das regras de trânsito aplicáveis.</p>
+          </article>
+          <article>
+            <div class="icon">📋</div>
+            <h3>Requisitos</h3>
+            <p>Antes de iniciar o processo, confira sempre os requisitos atuais e os procedimentos diretamente nos canais oficiais do DETRAN.</p>
+          </article>
+          <article>
+            <div class="icon">💼</div>
+            <h3>Mercado</h3>
+            <p>A habilitação pode fazer parte de uma trajetória profissional, mas qualificação, experiência e oportunidades também fazem diferença.</p>
+          </article>
+        </div>
 
-        <img src="Onibus.png"
-             alt="Ônibus - Categoria D">
-
-        <h2>Categoria D</h2>
-
-        <p>Veículos para transporte de passageiros-02 Anos de B </p>
-
+        <div class="topics">
+          <div><b>01</b><span>Como funciona a evolução para a Categoria C?</span></div>
+          <div><b>02</b><span>Quais desafios aparecem durante o processo?</span></div>
+          <div><b>03</b><span>O que muda na rotina de quem trabalha com carga?</span></div>
+          <div><b>04</b><span>Quais qualificações podem ampliar oportunidades?</span></div>
+        </div>
       </div>
+    </section>
 
+    <!-- EVOLUÇÃO -->
+    <section class="section" id="evolucao">
+      <div class="container">
+        <p class="eyebrow">Entenda a evolução</p>
+        <h2>Da Categoria B à Categoria E</h2>
+        <p>A sequência abaixo ajuda a visualizar os diferentes tipos de habilitação. Os requisitos e regras devem ser conferidos nas normas vigentes e no órgão de trânsito.</p>
 
-      <!-- ======================
-           CATEGORIA E
-           ====================== -->
-      <div class="categoria categoria-e">
-
-        <img src="Carreta.png"
-             alt="Carreta - Categoria E">
-
-        <h2>Categoria E</h2>
-
-        <p>Veículos articulados e combinações- 01 Ano de C ou 01 Ano de D</p>
-
+        <div class="cards">
+          <article>
+            <img src="Carro.png" alt="Carro - Categoria B" style="width:100%;height:150px;object-fit:contain;">
+            <h3>Categoria B</h3>
+            <p>Veículos leves, dentro das características previstas para a categoria.</p>
+          </article>
+          <article style="border:2px solid #111;">
+            <img src="Caminhão.png" alt="Caminhão - Categoria C" style="width:100%;height:150px;object-fit:contain;">
+            <h3>Categoria C</h3>
+            <p><strong>O foco principal deste projeto:</strong> veículos de carga e a realidade profissional de quem busca essa evolução.</p>
+          </article>
+          <article>
+            <img src="Onibus.png" alt="Ônibus - Categoria D" style="width:100%;height:150px;object-fit:contain;">
+            <h3>Categoria D</h3>
+            <p>Categoria destinada à condução de veículos para transporte de passageiros, conforme as regras vigentes.</p>
+          </article>
+          <article>
+            <img src="Carreta.png" alt="Carreta - Categoria E" style="width:100%;height:150px;object-fit:contain;">
+            <h3>Categoria E</h3>
+            <p>Combinações de veículos e veículos articulados, conforme os requisitos legais aplicáveis.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <!-- MITO X REALIDADE -->
+    <section class="section light" id="mitos">
+      <div class="container">
+        <p class="eyebrow">Mito × realidade</p>
+        <h2>Informação para tomar decisões melhores</h2>
+        <p>O projeto nasceu para questionar ideias que circulam entre candidatos e profissionais e incentivar a busca por informação confiável.</p>
 
-
-    <!-- FRASE FINAL -->
-    <div class="frase-final">
-
-      B → C → D → E
-
-      <br>
-
-      Da Categoria B à Categoria E — evolua sua habilitação.
-
-    </div>
-
-  </section>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mito da Categoria D</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-    }
-
-    /* ÁREA DA ANIMAÇÃO */
-    .animacao-cde {
-      width: 100%;
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .titulo-animacao {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #222;
-    }
-
-    .subtitulo-animacao {
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 30px;
-    }
-
-    /* LINHA C - D - E */
-    .categorias {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .categoria {
-      width: 250px;
-      min-height: 250px;
-      padding: 15px;
-      border-radius: 18px;
-      background: #f5f5f5;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-
-      opacity: 0;
-      transform: translateX(100px);
-    }
-
-    .categoria img {
-      width: 100%;
-      max-width: 210px;
-      height: 150px;
-      object-fit: contain;
-      display: block;
-      margin: auto;
-    }
-
-    .categoria h2 {
-      margin: 10px 0 5px;
-      font-size: 30px;
-    }
-
-    .categoria p {
-      margin: 0;
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* ANIMAÇÃO C */
-    .categoria-c {
-      animation: entrarC 1.2s ease forwards;
-      animation-delay: 0.5s;
-    }
-
-    /* ANIMAÇÃO D */
-    .categoria-d {
-      animation: entrarD 1.2s ease forwards;
-      animation-delay: 2s;
-    }
-
-    /* ANIMAÇÃO E */
-    .categoria-e {
-      animation: entrarE 1.2s ease forwards;
-      animation-delay: 3.5s;
-    }
-
-    @keyframes entrarC {
-      from {
-        opacity: 0;
-        transform: translateX(-250px) scale(0.8);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    @keyframes entrarD {
-      from {
-        opacity: 0;
-        transform: translateX(250px) scale(0.8);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
-    }
-
-    @keyframes entrarE {
-      from {
-        opacity: 0;
-        transform: translateY(100px) scale(0.8);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    /* DESTAQUE DA CATEGORIA D */
-    .categoria-d {
-      
-    }
-
-    /* FRASE FINAL */
-    .frase-final {
-      margin-top: 30px;
-      font-size: 21px;
-      font-weight: bold;
-      color: #222;
-
-      opacity: 0;
-      animation: aparecerFrase 1s ease forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes aparecerFrase {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* CELULAR */
-    @media (max-width: 700px) {
-
-      .titulo-animacao {
-        font-size: 23px;
-      }
-
-      .categorias {
-        flex-direction: column;
-      }
-
-      .categoria {
-        width: 90%;
-        max-width: 300px;
-      }
-
-      .categoria img {
-        height: 140px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <section class="animacao-cde">
-
-    <div class="titulo-animacao">
-      Evolução das Categorias
-    </div>
-
-    <div class="subtitulo-animacao">
-      Conheça a sequência para sua habilitação
-    </div>
-
-    <div class="categorias">
-
-</body>
-</html><div
-</div><!DOCTYPE html>
-<html lang="pt-BR">
-<head><style>
-/* Marca d'água do site */
-.marca-dagua {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 280px;
-    max-width: 30vw;
-    opacity: 0.10;
-    z-index: 999;
-    pointer-events: none;
-    user-select: none;
-}
-
-/* Em celulares */
-@media (max-width: 600px) {
-    .marca-dagua {
-        width: 180px;
-        max-width: 40vw;
-        right: 10px;
-        bottom: 10px;
-        opacity: 0.08;
-    }
-}
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>O Mito da Categoria D | Informação para motoristas</title>
-<meta name="description" content="O Mito da Categoria D: informação, formação e valorização dos motoristas de veículos de carga no Brasil.">
-<meta name="theme-color" content="#111111">
-<link rel="stylesheet" href="style.css">
-</head>
-<body><img src="marca-dagua.png" 
-     alt="" 
-     class="marca-dagua">
-<header>
-  <div class="container nav">
-    <a class="brand" href="#inicio" aria-label="O Mito da Categoria D">O MITO DA CATEGORIA D</a>
-    <nav class="menu" aria-label="Navegação principal">
-      <a href="#sobre">Projeto</a>
-      <a href="#conteudo">Conteúdo</a>
-      <a href="#videos">Vídeos</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a class="btn btn-small" href="ebook.pdf" target="_blank" rel="noopener">📖 eBook</a>
-  </div>
-</header>
-
-<main id="inicio">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">PROJETO EDITORIAL • 2026</p>
-      <h1>O Mito da<br><span>Categoria D</span></h1>
-      <p class="subtitle">Informação para entender a realidade da habilitação profissional, da Categoria C ao mercado de transporte de cargas.</p>
-      <div class="actions">
-        <a class="btn" href="ebook.pdf" target="_blank" rel="noopener">📖 Ler o eBook</a>
-        <a class="btn btn-outline" href="#videos">▶ Assistir aos vídeos</a>
+        <div class="cards">
+          <article>
+            <h3>MITO</h3>
+            <p>“Ter uma categoria profissional na CNH garante emprego automaticamente.”</p>
+          </article>
+          <article>
+            <h3>REALIDADE</h3>
+            <p>A habilitação pode abrir portas, mas experiência, qualificação, perfil profissional e demanda do mercado também contam.</p>
+          </article>
+          <article>
+            <h3>MITO</h3>
+            <p>“Só a prova importa.”</p>
+          </article>
+          <article>
+            <h3>REALIDADE</h3>
+            <p>Preparação, conhecimento das regras, prática responsável e formação contínua fazem parte da trajetória profissional.</p>
+          </article>
+        </div>
       </div>
-      <p class="hero-note">Conteúdo independente para motoristas, candidatos, profissionais do setor e quem quer entender melhor o mercado.</p>
-    </div>
-    <div class="cover">
-      <img src="logo.png" alt="Capa do projeto O Mito da Categoria D">
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="sobre" class="section">
-  <div class="container">
-    <p class="eyebrow">SOBRE O PROJETO</p>
-    <h2>Mais informação. Menos mito.</h2>
-    <p>O projeto nasceu para reunir informação e experiências sobre formação de motoristas, habilitação profissional, oportunidades e os desafios enfrentados por quem deseja entrar ou crescer no transporte de cargas.</p>
-    <div class="cards">
-      <article><div class="icon">🚛</div><h3>Categoria C</h3><p>Entenda a importância da habilitação para veículos de carga e os caminhos possíveis para quem deseja atuar profissionalmente.</p></article>
-      <article><div class="icon">📚</div><h3>Formação</h3><p>Conteúdo sobre preparação, qualificação, cursos e os conhecimentos que ajudam o motorista a chegar mais preparado ao mercado.</p></article>
-      <article><div class="icon">💼</div><h3>Mercado</h3><p>Reflexões sobre contratação, experiência profissional, exigências das empresas e oportunidades no setor.</p></article>
+    <!-- EBOOK -->
+    <section class="section" id="ebook">
+      <div class="container">
+        <p class="eyebrow">Material do projeto</p>
+        <h2>Leia o eBook Mito da Categoria D</h2>
+        <p>O eBook é a base de reflexão do projeto. Ele reúne a ideia central e os questionamentos que deram origem ao site.</p>
+        <div class="actions">
+          <a class="btn" href="ebook.pdf" target="_blank" rel="noopener">Abrir o eBook em PDF</a>
+          <a class="btn btn-outline" href="#voz">Participar da pesquisa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEOS -->
+    <section class="section light" id="videos">
+      <div class="container">
+        <p class="eyebrow">Conteúdo em vídeo</p>
+        <h2>Vídeos para continuar aprendendo</h2>
+        <p>Você pode substituir os cartões abaixo pelos links dos vídeos do seu canal ou de fontes oficiais.</p>
+
+        <div class="video-grid">
+          <a class="video-card" href="#" aria-label="Adicionar primeiro vídeo">
+            <span class="play">▶</span>
+            <strong>Categoria C: por onde começar?</strong>
+            <small>Adicione aqui o link do seu vídeo</small>
+          </a>
+          <a class="video-card" href="#" aria-label="Adicionar segundo vídeo">
+            <span class="play">▶</span>
+            <strong>Mito x realidade no transporte</strong>
+            <small>Adicione aqui o link do seu vídeo</small>
+          </a>
+          <a class="video-card" href="#" aria-label="Adicionar terceiro vídeo">
+            <span class="play">▶</span>
+            <strong>Experiências de quem vive a estrada</strong>
+            <small>Adicione aqui o link do seu vídeo</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- A VOZ DOS MOTORISTAS -->
+    <section class="voz-motoristas" id="voz">
+      <div class="container">
+        <div class="voz-header">
+          <span class="voz-kicker">A voz dos motoristas</span>
+          <h2>Ajude a construir esse projeto</h2>
+          <p>Queremos transformar experiências reais em informação. Responda à pesquisa e conte o que você viveu na sua trajetória profissional.</p>
+        </div>
+
+        <div class="voz-grid">
+          <article class="voz-card">
+            <span class="voz-numero">01</span>
+            <h3>Você já possui Categoria C?</h3>
+            <label><input type="radio" name="categoria-c" value="sim"> Sim</label>
+            <label><input type="radio" name="categoria-c" value="nao"> Não</label>
+            <label><input type="radio" name="categoria-c" value="processo"> Estou no processo</label>
+          </article>
+
+          <article class="voz-card">
+            <span class="voz-numero">02</span>
+            <h3>Qual foi sua maior dificuldade?</h3>
+            <label><input type="checkbox" name="dificuldade" value="custo"> Custo</label>
+            <label><input type="checkbox" name="dificuldade" value="tempo"> Falta de tempo</label>
+            <label><input type="checkbox" name="dificuldade" value="prova"> Provas e preparação</label>
+            <label><input type="checkbox" name="dificuldade" value="trabalho"> Conciliar com o trabalho</label>
+          </article>
+
+          <article class="voz-card voz-relato">
+            <span class="voz-numero">03</span>
+            <h3>Conte sua experiência</h3>
+            <p>Use este espaço para registrar uma dificuldade, uma conquista ou uma sugestão para quem está começando.</p>
+            <textarea name="relato" placeholder="Escreva seu relato aqui..."></textarea>
+          </article>
+        </div>
+
+        <div class="voz-cta">
+          <h3>Quer responder oficialmente à pesquisa?</h3>
+          <p>Conecte este botão ao seu Google Forms para registrar as respostas. O formulário ainda não foi inserido nesta versão porque o link oficial precisa ser definido por você.</p>
+          <a class="voz-botao" href="#" aria-label="Adicionar link do Google Forms">Abrir pesquisa</a>
+          <small>Importante: este formulário visual é apenas uma demonstração. Para armazenar respostas, use um Google Forms ou outro serviço de formulário.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2>Antes de tomar uma decisão, informe-se</h2>
+        <div class="faq">
+          <details>
+            <summary>O site substitui as informações do DETRAN?</summary>
+            <p>Não. O site é um projeto informativo. Para requisitos, documentos, taxas, exames e procedimentos, consulte sempre o órgão de trânsito competente e as normas vigentes.</p>
+          </details>
+          <details>
+            <summary>A Categoria C garante uma vaga de emprego?</summary>
+            <p>Não há garantia automática. A habilitação pode ser uma parte importante da qualificação, mas cada vaga possui seus próprios requisitos.</p>
+          </details>
+          <details>
+            <summary>Posso participar do projeto?</summary>
+            <p>Sim. A proposta é ouvir experiências reais e ampliar o conteúdo com pesquisas, relatos e materiais educativos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">Mito da Categoria D</p>
+          <h2>Conhecimento também é parte da estrada.</h2>
+          <p>Compartilhe o projeto, leia o eBook e ajude a levar informação para quem está buscando uma nova oportunidade profissional.</p>
+          <div class="actions">
+            <a class="btn btn-light" href="#ebook">Ler o eBook</a>
+            <a class="btn btn-dark-outline" href="#voz">Participar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Mito da Categoria D</strong>
+        <p>Projeto independente de informação e valorização profissional.</p>
+      </div>
+      <div>
+        <p><a href="#inicio">Início</a> · <a href="#categoria-c">Categoria C</a> · <a href="#ebook">eBook</a> · <a href="#voz">Pesquisa</a></p>
+        <small>© <span id="ano"></span> Mito da Categoria D. Conteúdo informativo.</small>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="conteudo" class="section light">
-  <div class="container">
-    <p class="eyebrow">CONTEÚDO</p>
-    <h2>O que você encontrará por aqui</h2>
-    <div class="topics">
-      <div><b>01</b><span>O paradoxo do apagão de mão de obra</span></div>
-      <div><b>02</b><span>O que diz a legislação e o que o mercado pratica</span></div>
-      <div><b>03</b><span>O impacto para quem está começando</span></div>
-      <div><b>04</b><span>O papel das autoescolas e da formação</span></div>
-      <div><b>05</b><span>Categoria C, D e os caminhos profissionais</span></div>
-      <div><b>06</b><span>Perguntas frequentes e informações úteis</span></div>
-    </div>
-    <a class="btn" href="ebook.pdf" target="_blank" rel="noopener">Acessar o eBook completo →</a>
-  </div>
-</section>
-
-
-<!-- A VOZ DOS MOTORISTAS -->
-<section id="voz-dos-motoristas" class="voz-motoristas">
-  <div class="container">
-    <div class="voz-header">
-      <span class="voz-kicker">PARTICIPE DA PESQUISA</span>
-      <h2>A Voz dos Motoristas</h2>
-      <p>
-        O que você pensa sobre a realidade da Categoria C?
-        Participe desta pesquisa de opinião e ajude a mostrar como as exigências
-        do mercado podem influenciar a formação e a entrada de novos profissionais
-        no transporte de cargas.
-      </p>
-    </div>
-
-    
-
-    <div class="voz-cta">
-      <h3>Quer participar da pesquisa?</h3>
-      <p>Responda ao formulário completo e ajude o projeto a conhecer a opinião de quem vive ou acompanha essa realidade.</p>
-      <!-- Substitua o endereço abaixo pelo seu Google Forms quando ele estiver pronto. -->
-      <a class="voz-botao" href="https://forms.gle/kM7UWrNLkPmcS4Ww6" target="_blank" rel="noopener noreferrer">
-        Participar da pesquisa
-      </a>
-      <small>Pesquisa de opinião do projeto Mito da Categoria D. Os resultados representam as respostas dos participantes e não necessariamente toda a população brasileira.</small>
-    </div>
-  </div>
-</section>
-
-<section id="videos" class="section videos">
-  <div class="container">
-    <p class="eyebrow">VÍDEOS</p>
-    <h2>Aprenda também pelo YouTube</h2>
-    <p>Esta área foi preparada para receber vídeos explicativos sobre CNH profissional, Categoria C/D, formação e mercado. Os links abaixo abrem pesquisas específicas no YouTube; assim você pode escolher conteúdos atuais e confiáveis.</p>
-    <div class="video-grid">
-      <a class="video-card" href="https://youtu.be/cGIrsx0F-dA?si=HFeMX-4jdWTohDOZ" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>Categoria C e veículos de carga</strong><small>Ver vídeos no YouTube</small>
-      </a>
-      <a class="video-card" href="https://www.youtube.com/live/VP4hIgzouuk?is=RhBoE3qQitFnX1b_" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>Categoria D: como funciona?</strong><small>Ver vídeos no YouTube</small>
-      </a>
-      <a class="video-card" href="https://youtu.be/L__suWqJdCo?si=FmGXMw9akzfs17M_" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>O Que Diz a Leí</strong><small>Ver vídeos no YouTube</small>
-        </a>
-      <a class="video-card" href="https://www.youtube.com/manualdotransito%E2%80%8B" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>Canal Manual do Trânsito</strong><small>Ver vídeos no YouTube</small>
-      </a>
-        <a class="video-card" href="https://youtu.be/hsHA0XR4-8Y?si=vbi7fv0hyXJn5rwS" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>Prazo Entre Categorias</strong><small>Ver vídeos no YouTube</small>
-      </a>
-         <a class="video-card" href="https://youtu.be/4OBtTihqrNs?si=1RcZ7bjftW1L0nZh" target="_blank" rel="noopener">
-        <span class="play">▶</span><strong>Saiba Mais</strong><small>Ver vídeos no YouTube</small>
-      </a>
-    </div>
-    <div class="video-tip"><strong>Próxima etapa:</strong> podemos substituir esses cards por vídeos específicos que você escolher e deixá-los incorporados diretamente no site.</div>
-  </div>
-</section>
-
-<section id="faq" class="section light">
-  <div class="container">
-    <p class="eyebrow">DÚVIDAS</p>
-    <h2>Perguntas frequentes</h2>
-    <div class="faq">
-      <details><summary>Qual é o objetivo do projeto?</summary><p>Levar informação acessível sobre habilitação profissional, formação e realidade do mercado de transporte de cargas.</p></details>
-      <details><summary>O site substitui informações oficiais do DETRAN?</summary><p>Não. O site é um projeto informativo. Para requisitos, taxas, prazos e procedimentos, sempre confira as fontes oficiais e a regulamentação vigente.</p></details>
-      <details><summary>Posso sugerir um tema ou vídeo?</summary><p>Sim. A ideia é ampliar o conteúdo do site continuamente com temas úteis para quem trabalha ou pretende trabalhar como motorista profissional.</p></details>
-      <details><summary>Onde está o eBook?</summary><p>O eBook está disponível diretamente neste site pelo botão “Ler o eBook”.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container cta-inner">
-    <div>
-      <p class="eyebrow">COMPARTILHE</p>
-      <h2>Informação também coloca o Brasil em movimento.</h2>
-      <p>Se este conteúdo for útil para outro motorista, compartilhe o projeto.</p>
-    </div>
-    <div class="actions">
-      <a class="btn btn-light" href="https://wa.me/?text=Conhe%C3%A7a%20o%20projeto%20O%20Mito%20da%20Categoria%20D%3A%20https%3A%2F%2Fwww.mitodacategoriad.com.br" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
-      <a class="btn btn-dark-outline" href="ebook.pdf" target="_blank" rel="noopener">📖 Ler o eBook</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container footer-grid">
-    <div><strong>O Mito da Categoria D</strong><p>Informação, formação e valorização do motorista profissional.</p></div>
-    <div><strong>www.mitodacategoriad.com.br</strong><p><small>Material editorial • 2026</small></p></div>
-  </div>
-</footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
