@@ -1,4 +1,7 @@
-## Hi there 👋
+<div align="center">
+  <img src="./imagem.png" alt="O Mito da Categoria D" width="400">
+</div>
+  ## Hi there 👋
 
 <!--
 **Mitodacategoriad/Mitodacategoriad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
