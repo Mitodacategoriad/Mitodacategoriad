@@ -13,7 +13,7 @@ body::after {
     
     background-position: center; /* Centraliza a imagem no meio da página */
     background-repeat: no-repeat; /* Evita que a imagem fique se repetindo */
-    background-size: 85%; /* Ajuste o tamanho da marca d'água aqui (ex: 40% da tela) */
+    background-size: 100%; /* Ajuste o tamanho da marca d'água aqui (ex: 40% da tela) */
     
     opacity: 0.15; /* Define a transparência (0.15 significa 15% visível, bem sutil) */
     z-index: -1; /* Joga a marca d'água para trás de todos os textos e blocos */
