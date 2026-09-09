@@ -275,4 +275,35 @@ footer small{color:#777}
     padding: 26px 20px;
   }
 }
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: 2px solid #25D366;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  border-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
