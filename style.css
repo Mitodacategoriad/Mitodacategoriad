@@ -279,16 +279,19 @@ footer small{color:#777}
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  align-items: center;/* Padronização dos 3 botões principais */
+  align-items: center;
+}  
+    /* Padronização dos 3 botões principais */
 .hero-buttons .btn {
     width: 210px !important;
     height: 48px !important;
     box-sizing: border-box;
     display: inline-flex;
-    align-items: center;}
+    align-items: center;
     justify-content: center;
     padding: 10px 12px !important;
     font-size: 14px !important;
+    line-height: 1.2 !important;
     white-space: nowrap;
     flex: 0 0 210px !important;
 }
