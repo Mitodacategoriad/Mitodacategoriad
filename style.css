@@ -301,8 +301,7 @@ footer small{color:#777}
   background: #1ebe5d;
   border-color: #1ebe5d;
   transform: translateY(-2px);
-  width:190px;   
-  padding:10px 15px;    
+    
 }
 
 @media (max-width: 600px) {
