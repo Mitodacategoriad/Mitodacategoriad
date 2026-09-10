@@ -288,6 +288,8 @@ footer small{color:#777}
   border: 2px solid #25D366;
   text-decoration: none;
   font-weight: 700;
+  width:220px;
+  padding:10px 15px;  
 }
 
 .btn-whatsapp:hover {
