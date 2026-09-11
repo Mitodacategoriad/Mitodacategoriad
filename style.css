@@ -283,22 +283,19 @@ footer small{color:#777}
     align-items: center;
 }
 
-/* Alinhamento dos botões */
+/* Padronização dos 3 botões principais */
 .hero-buttons .btn {
+    width: 210px !important;
     height: 48px !important;
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Botão WhatsApp */
-.hero-buttons .btn-whatsapp {
-    width: 250px !important;
-    height: 48px !important;
-    padding: 10px 16px !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
     white-space: nowrap;
-    flex: 0 0 250px !important;
+    flex: 0 0 210px !important;
 }
   .hero-buttons .btn {
     width: 100%;
