@@ -412,6 +412,1166 @@ III) Para as categorias “D” e “E”, ter pelo menos 21 anos (vinte e um an
     ⚖️ CONTRAN
   </a>
 </section>
+    <!-- =========================================================
+     DESAFIO DO MOTORISTA
+     Projeto: MITO DA CATEGORIA D
+     ========================================================= -->
+
+<section id="desafio-motorista" class="desafio-container">
+
+  <div class="desafio-header">
+    <div class="desafio-icon">🧠</div>
+
+    <h2>Desafio do Motorista</h2>
+
+    <p>
+      Você conhece realmente as regras que envolvem o trânsito,
+      a CNH e as categorias de habilitação?
+    </p>
+
+    <strong>
+      Teste seus conhecimentos!
+    </strong>
+  </div>
+
+
+  <div id="quiz-area">
+
+    <!-- A pergunta será carregada pelo JavaScript -->
+
+  </div>
+
+
+  <div id="resultado" class="resultado-final" style="display:none;">
+
+    <div class="resultado-icon">
+      🏁
+    </div>
+
+    <h2>Desafio concluído!</h2>
+
+    <p id="pontuacao-final"></p>
+
+    <div id="mensagem-final"></div>
+
+    <button
+      type="button"
+      class="botao-reiniciar"
+      onclick="reiniciarQuiz()">
+
+      🔄 FAZER NOVAMENTE
+
+    </button>
+
+  </div>
+
+
+  <div class="desafio-aviso">
+
+    <strong>📚 Quer estudar mais?</strong>
+
+    <p>
+      Consulte sempre as fontes oficiais do Governo Federal,
+      o Código de Trânsito Brasileiro e as normas do CONTRAN.
+    </p>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
+
+.desafio-container {
+
+  max-width: 900px;
+
+  margin: 50px auto;
+
+  padding: 30px 20px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.desafio-header {
+
+  text-align: center;
+
+  margin-bottom: 35px;
+
+}
+
+
+.desafio-icon {
+
+  font-size: 55px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.desafio-header h2 {
+
+  font-size: 36px;
+
+  margin: 5px 0 12px;
+
+}
+
+
+.desafio-header p {
+
+  font-size: 17px;
+
+  line-height: 1.6;
+
+  max-width: 700px;
+
+  margin: 0 auto 12px;
+
+}
+
+
+.desafio-header strong {
+
+  font-size: 19px;
+
+}
+
+
+/* =========================================================
+   CARTÃO DA PERGUNTA
+   ========================================================= */
+
+.pergunta-card {
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 6px 22px rgba(0,0,0,0.08);
+
+}
+
+
+.numero-pergunta {
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+
+}
+
+
+.pergunta-card h3 {
+
+  font-size: 23px;
+
+  line-height: 1.45;
+
+  margin: 0 0 25px;
+
+}
+
+
+/* =========================================================
+   ALTERNATIVAS
+   ========================================================= */
+
+.alternativa {
+
+  display: block;
+
+  width: 100%;
+
+  text-align: left;
+
+  padding: 16px;
+
+  margin: 12px 0;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 10px;
+
+  background: #fafafa;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: all 0.2s ease;
+
+}
+
+
+.alternativa:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================================================
+   RESPOSTA CORRETA / ERRADA
+   ========================================================= */
+
+.alternativa.correta {
+
+  border: 2px solid #16803c;
+
+  background: #eaf8ef;
+
+}
+
+
+.alternativa.errada {
+
+  border: 2px solid #c62828;
+
+  background: #fdecec;
+
+}
+
+
+.alternativa:disabled {
+
+  cursor: default;
+
+}
+
+
+/* =========================================================
+   EXPLICAÇÃO
+   ========================================================= */
+
+.explicacao {
+
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: #f5f5f5;
+
+  line-height: 1.65;
+
+}
+
+
+.explicacao strong {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+}
+
+
+.explicacao a {
+
+  display: inline-block;
+
+  margin-top: 12px;
+
+  font-weight: bold;
+
+}
+
+
+/* =========================================================
+   BOTÃO PRÓXIMA
+   ========================================================= */
+
+.botao-proxima {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+.botao-proxima:hover {
+
+  opacity: 0.85;
+
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.resultado-final {
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 18px;
+
+  padding: 35px 25px;
+
+  box-shadow:
+    0 6px 22px rgba(0,0,0,0.08);
+
+}
+
+
+.resultado-icon {
+
+  font-size: 60px;
+
+}
+
+
+.resultado-final h2 {
+
+  font-size: 30px;
+
+}
+
+
+#pontuacao-final {
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+}
+
+
+/* =========================================================
+   BOTÃO REINICIAR
+   ========================================================= */
+
+.botao-reiniciar {
+
+  margin-top: 20px;
+
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111111;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+/* =========================================================
+   AVISO
+   ========================================================= */
+
+.desafio-aviso {
+
+  margin-top: 30px;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: #f5f5f5;
+
+  text-align: center;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .desafio-container {
+
+    padding: 20px 12px;
+
+  }
+
+
+  .desafio-header h2 {
+
+    font-size: 28px;
+
+  }
+
+
+  .pergunta-card {
+
+    padding: 22px 16px;
+
+  }
+
+
+  .pergunta-card h3 {
+
+    font-size: 20px;
+
+  }
+
+
+  .alternativa {
+
+    font-size: 15px;
+
+    padding: 14px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+/* =========================================================
+   BANCO DE PERGUNTAS
+   ========================================================= */
+
+const perguntas = [
+
+  {
+
+    pergunta:
+      "Segundo o Código de Trânsito Brasileiro, qual veículo pode ser conduzido por habilitado na categoria D?",
+
+    alternativas: [
+
+      "Veículo motorizado de duas ou três rodas.",
+
+      "Veículo utilizado no transporte de passageiros cuja lotação exceda 8 lugares, excluído o motorista.",
+
+      "Somente veículos de carga com PBT superior a 3.500 kg.",
+
+      "Somente combinações de veículos com reboque."
+
+    ],
+
+    correta: 1,
+
+    explicacao:
+      "A categoria D permite conduzir veículo abrangido pelas categorias B e C e veículo motorizado utilizado no transporte de passageiros cuja lotação exceda 8 lugares, excluído o motorista.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 143, IV.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "De acordo com o CTB, qual é a categoria relacionada ao veículo de transporte de carga cujo peso bruto total exceda 3.500 kg?",
+
+    alternativas: [
+
+      "Categoria A.",
+
+      "Categoria B.",
+
+      "Categoria C.",
+
+      "Categoria D."
+
+    ],
+
+    correta: 2,
+
+    explicacao:
+      "A categoria C abrange veículo da categoria B e veículo motorizado utilizado em transporte de carga cujo peso bruto total exceda 3.500 kg.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 143, III.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Qual é a idade mínima prevista no CTB para habilitação nas categorias D e E?",
+
+    alternativas: [
+
+      "18 anos.",
+
+      "19 anos.",
+
+      "20 anos.",
+
+      "21 anos."
+
+    ],
+
+    correta: 3,
+
+    explicacao:
+      "O art. 145 do CTB estabelece que, para habilitar-se nas categorias D e E, o candidato deverá ser maior de 21 anos.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 145, I.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Para habilitar-se na categoria D, o CTB prevê qual destas possibilidades de tempo mínimo de habilitação anterior?",
+
+    alternativas: [
+
+      "1 ano na categoria A.",
+
+      "2 anos na categoria B ou 1 ano na categoria C.",
+
+      "Somente 5 anos na categoria B.",
+
+      "Não existe requisito de categoria anterior."
+
+    ],
+
+    correta: 1,
+
+    explicacao:
+      "Para a categoria D, o CTB prevê estar habilitado no mínimo há 2 anos na categoria B ou no mínimo há 1 ano na categoria C.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 145, II, 'a'.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Qual categoria está relacionada à combinação de veículos quando a unidade acoplada possui 6.000 kg ou mais de PBT, observadas as demais condições legais?",
+
+    alternativas: [
+
+      "Categoria A.",
+
+      "Categoria B.",
+
+      "Categoria C.",
+
+      "Categoria E."
+
+    ],
+
+    correta: 3,
+
+    explicacao:
+      "A categoria E abrange combinação de veículos em que a unidade tratora se enquadre nas categorias B, C ou D e a unidade acoplada tenha 6.000 kg ou mais de peso bruto total, ou cuja lotação exceda 8 lugares, conforme o art. 143, V, do CTB.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 143, V.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Segundo o CTB, quem é responsável pela implantação da sinalização de trânsito em uma via?",
+
+    alternativas: [
+
+      "Qualquer motorista que utilize a via.",
+
+      "O proprietário do veículo.",
+
+      "O órgão ou entidade de trânsito com circunscrição sobre a via.",
+
+      "Somente a Polícia Militar."
+
+    ],
+
+    correta: 2,
+
+    explicacao:
+      "O art. 90 do CTB estabelece responsabilidade ao órgão ou entidade de trânsito com circunscrição sobre a via pela implantação da sinalização, respondendo pela sua falta, insuficiência ou incorreta colocação.",
+
+    fonte:
+      "Código de Trânsito Brasileiro — Art. 90.",
+
+    link:
+      "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Na sinalização horizontal, segundo os materiais oficiais de trânsito, a cor amarela é utilizada, entre outras funções, para:",
+
+    alternativas: [
+
+      "Separar movimentos veiculares de fluxos opostos.",
+
+      "Indicar exclusivamente estacionamento permitido.",
+
+      "Separar exclusivamente movimentos do mesmo sentido.",
+
+      "Identificar somente faixas de pedestres."
+
+    ],
+
+    correta: 0,
+
+    explicacao:
+      "O material oficial da SENATRAN informa que a cor amarela é utilizada, entre outras funções, para separar movimentos veiculares de fluxos opostos e regulamentar ultrapassagem e deslocamento lateral.",
+
+    fonte:
+      "SENATRAN — Manual Brasileiro de Sinalização de Trânsito.",
+
+    link:
+      "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/manuais-brasileiros-de-sinalizacao-de-transito"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Qual órgão é o órgão máximo executivo de trânsito da União?",
+
+    alternativas: [
+
+      "SENATRAN.",
+
+      "JARI.",
+
+      "CETRAN.",
+
+      "Prefeitura Municipal."
+
+    ],
+
+    correta: 0,
+
+    explicacao:
+      "A SENATRAN — Secretaria Nacional de Trânsito — é o órgão máximo executivo de trânsito do Sistema Nacional de Trânsito, com jurisdição sobre todo o território brasileiro.",
+
+    fonte:
+      "Ministério dos Transportes — SENATRAN.",
+
+    link:
+      "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Qual órgão possui competência para estabelecer normas regulamentares relacionadas ao trânsito dentro de suas atribuições legais?",
+
+    alternativas: [
+
+      "CONTRAN.",
+
+      "Somente as empresas de transporte.",
+
+      "Somente os motoristas profissionais.",
+
+      "Somente as autoescolas."
+
+    ],
+
+    correta: 0,
+
+    explicacao:
+      "O CONTRAN — Conselho Nacional de Trânsito — exerce competências normativas previstas no CTB. Suas resoluções regulamentam diversos aspectos do trânsito brasileiro.",
+
+    fonte:
+      "SENATRAN — Resoluções do CONTRAN.",
+
+    link:
+      "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes-contran"
+
+  },
+
+
+  {
+
+    pergunta:
+      "Por que é importante consultar diretamente as normas oficiais ao estudar para uma categoria de habilitação?",
+
+    alternativas: [
+
+      "Porque aplicativos e sites particulares sempre substituem a legislação.",
+
+      "Porque as normas podem ser alteradas e a fonte oficial permite conferir a regra vigente.",
+
+      "Porque somente vídeos de internet possuem validade jurídica.",
+
+      "Porque não existe legislação escrita sobre trânsito."
+
+    ],
+
+    correta: 1,
+
+    explicacao:
+      "As normas de trânsito podem ser alteradas. Por isso, para estudo sério, é importante consultar o CTB, as resoluções do CONTRAN e os materiais oficiais disponibilizados pelos órgãos competentes.",
+
+    fonte:
+      "SENATRAN — Legislação e Resoluções do CONTRAN.",
+
+    link:
+      "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran"
+
+  }
+
+];
+
+
+/* =========================================================
+   VARIÁVEIS DO QUIZ
+   ========================================================= */
+
+let perguntaAtual = 0;
+
+let pontuacao = 0;
+
+
+/* =========================================================
+   INICIAR QUIZ
+   ========================================================= */
+
+mostrarPergunta();
+
+
+/* =========================================================
+   MOSTRAR PERGUNTA
+   ========================================================= */
+
+function mostrarPergunta() {
+
+  const area =
+    document.getElementById("quiz-area");
+
+  const pergunta =
+    perguntas[perguntaAtual];
+
+
+  let html = `
+
+    <div class="pergunta-card">
+
+      <div class="numero-pergunta">
+
+        Pergunta ${perguntaAtual + 1}
+        de ${perguntas.length}
+
+      </div>
+
+
+      <h3>
+        ${pergunta.pergunta}
+      </h3>
+
+  `;
+
+
+  pergunta.alternativas.forEach(
+    (alternativa, indice) => {
+
+      html += `
+
+        <button
+          type="button"
+          class="alternativa"
+          onclick="responder(${indice})">
+
+          ${String.fromCharCode(65 + indice)})
+          ${alternativa}
+
+        </button>
+
+      `;
+
+    }
+  );
+
+
+  html += `
+
+      <div
+        id="explicacao"
+        class="explicacao"
+        style="display:none;">
+
+      </div>
+
+      <button
+        id="botao-proxima"
+        type="button"
+        class="botao-proxima"
+        style="display:none;"
+        onclick="proximaPergunta()">
+
+        PRÓXIMA PERGUNTA ➜
+
+      </button>
+
+    </div>
+
+  `;
+
+
+  area.innerHTML = html;
+
+}
+
+
+/* =========================================================
+   RESPONDER
+   ========================================================= */
+
+function responder(indiceEscolhido) {
+
+  const pergunta =
+    perguntas[perguntaAtual];
+
+  const botoes =
+    document.querySelectorAll(".alternativa");
+
+
+  /* Impede nova resposta */
+
+  botoes.forEach(
+    botao => botao.disabled = true
+  );
+
+
+  /* Mostra a resposta correta */
+
+  botoes[pergunta.correta]
+    .classList.add("correta");
+
+
+  /* Verifica resposta */
+
+  if (indiceEscolhido === pergunta.correta) {
+
+    pontuacao++;
+
+  } else {
+
+    botoes[indiceEscolhido]
+      .classList.add("errada");
+
+  }
+
+
+  /* Explicação */
+
+  const explicacao =
+    document.getElementById("explicacao");
+
+
+  explicacao.innerHTML = `
+
+    <strong>
+      ${
+        indiceEscolhido === pergunta.correta
+          ? "✅ Resposta correta!"
+          : "❌ Resposta incorreta!"
+      }
+    </strong>
+
+    <p>
+      ${pergunta.explicacao}
+    </p>
+
+    <p>
+      <strong>📖 Fonte:</strong>
+      ${pergunta.fonte}
+    </p>
+
+    <a
+      href="${pergunta.link}"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      🔎 CONSULTAR FONTE OFICIAL
+
+    </a>
+
+  `;
+
+
+  explicacao.style.display = "block";
+
+
+  /* Mostra botão */
+
+  const proxima =
+    document.getElementById("botao-proxima");
+
+  proxima.style.display = "block";
+
+
+  /* Última pergunta */
+
+  if (perguntaAtual === perguntas.length - 1) {
+
+    proxima.innerHTML =
+      "🏁 VER MEU RESULTADO";
+
+  }
+
+}
+
+
+/* =========================================================
+   PRÓXIMA PERGUNTA
+   ========================================================= */
+
+function proximaPergunta() {
+
+  perguntaAtual++;
+
+
+  if (perguntaAtual < perguntas.length) {
+
+    mostrarPergunta();
+
+    window.scrollTo({
+      top:
+        document.getElementById(
+          "desafio-motorista"
+        ).offsetTop,
+
+      behavior: "smooth"
+
+    });
+
+  } else {
+
+    mostrarResultado();
+
+  }
+
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+function mostrarResultado() {
+
+  document.getElementById(
+    "quiz-area"
+  ).style.display = "none";
+
+
+  document.getElementById(
+    "resultado"
+  ).style.display = "block";
+
+
+  document.getElementById(
+    "pontuacao-final"
+  ).innerHTML =
+
+    `Você acertou <strong>
+      ${pontuacao}
+    </strong> de <strong>
+      ${perguntas.length}
+    </strong> perguntas.`;
+
+
+  let mensagem = "";
+
+
+  const porcentagem =
+    (pontuacao / perguntas.length) * 100;
+
+
+  if (porcentagem === 100) {
+
+    mensagem = `
+      🏆 <strong>Excelente!</strong>
+      <br><br>
+      Você demonstrou um ótimo conhecimento
+      sobre trânsito e legislação.
+    `;
+
+  } else if (porcentagem >= 80) {
+
+    mensagem = `
+      🚛 <strong>Muito bom!</strong>
+      <br><br>
+      Você tem um excelente nível de conhecimento.
+      Continue estudando as normas oficiais.
+    `;
+
+  } else if (porcentagem >= 60) {
+
+    mensagem = `
+      👍 <strong>Bom trabalho!</strong>
+      <br><br>
+      Você possui uma boa base, mas ainda pode
+      aprofundar seus conhecimentos.
+    `;
+
+  } else if (porcentagem >= 40) {
+
+    mensagem = `
+      📚 <strong>Continue estudando!</strong>
+      <br><br>
+      A Biblioteca do Motorista pode ajudar você
+      a conhecer melhor a legislação.
+    `;
+
+  } else {
+
+    mensagem = `
+      📖 <strong>Hora de estudar um pouco mais!</strong>
+      <br><br>
+      Consulte o CTB, as resoluções do CONTRAN
+      e os materiais da SENATRAN.
+    `;
+
+  }
+
+
+  document.getElementById(
+    "mensagem-final"
+  ).innerHTML = mensagem;
+
+
+  window.scrollTo({
+    top:
+      document.getElementById(
+        "desafio-motorista"
+      ).offsetTop,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+
+/* =========================================================
+   REINICIAR
+   ========================================================= */
+
+function reiniciarQuiz() {
+
+  perguntaAtual = 0;
+
+  pontuacao = 0;
+
+
+  document.getElementById(
+    "resultado"
+  ).style.display = "none";
+
+
+  document.getElementById(
+    "quiz-area"
+  ).style.display = "block";
+
+
+  mostrarPergunta();
+
+
+  window.scrollTo({
+    top:
+      document.getElementById(
+        "desafio-motorista"
+      ).offsetTop,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+</script>
 
     <!-- FAQ -->
     <section class="section" id="faq">
