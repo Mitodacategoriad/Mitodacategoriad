@@ -278,6 +278,651 @@ III) Para as categorias “D” e “E”, ter pelo menos 21 anos (vinte e um an
           <div><b>03</b><span>O que muda na rotina de quem trabalha com carga?</span></div>
           <div><b>04</b><span>Quais qualificações podem ampliar oportunidades?</span></div>
         </div>
+        <!-- =====================================================
+     ANIMAÇÃO — MITO DA CATEGORIA D
+     B → C → E  x  B → D → E
+     ===================================================== -->
+
+<section class="caminhos-cnh" id="caminhos-cnh">
+
+  <div class="caminhos-titulo">
+    <span class="caminhos-tag">ENTENDA A DIFERENÇA</span>
+    <h2>Qual caminho você seguiria?</h2>
+    <p>
+      Compare os caminhos para quem começa na categoria B.
+    </p>
+  </div>
+
+  <div class="caminhos-container">
+
+    <!-- CAMINHO B → C → E -->
+    <div class="caminho-card caminho-verde">
+
+      <div class="caminho-header">
+        <span class="numero-caminho">01</span>
+        <h3>B → C → E</h3>
+      </div>
+
+      <p class="caminho-subtitulo">
+        Passando primeiro pela categoria C
+      </p>
+
+      <div class="linha-caminho">
+
+        <div class="categoria ativa">
+          <div class="icone-veiculo">🚗</div>
+          <div class="categoria-letra">B</div>
+          <div class="categoria-texto">
+            Categoria B
+          </div>
+        </div>
+
+        <div class="seta">
+          <span>→</span>
+          <small>1 ano</small>
+        </div>
+
+        <div class="categoria">
+          <div class="icone-veiculo">🚛</div>
+          <div class="categoria-letra">C</div>
+          <div class="categoria-texto">
+            Categoria C
+          </div>
+        </div>
+
+        <div class="seta">
+          <span>→</span>
+          <small>1 ano</small>
+        </div>
+
+        <div class="categoria">
+          <div class="icone-veiculo">🚚</div>
+          <div class="categoria-letra">E</div>
+          <div class="categoria-texto">
+            Categoria E
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn-caminho" onclick="mostrarCaminho('c')">
+        Ver este caminho
+      </button>
+
+      <div class="explicacao" id="explicacao-c">
+        <strong>📌 Caminho B → C → E</strong>
+        <p>
+          Para passar de B para C, é necessário cumprir
+          pelo menos 1 ano na categoria B.
+          Para o caminho até E passando pela C,
+          deve ser observado o requisito mínimo de
+          1 ano na categoria C.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- CAMINHO B → D → E -->
+    <div class="caminho-card caminho-laranja">
+
+      <div class="caminho-header">
+        <span class="numero-caminho">02</span>
+        <h3>B → D → E</h3>
+      </div>
+
+      <p class="caminho-subtitulo">
+        Sem passar primeiro pela categoria C
+      </p>
+
+      <div class="linha-caminho">
+
+        <div class="categoria ativa">
+          <div class="icone-veiculo">🚗</div>
+          <div class="categoria-letra">B</div>
+          <div class="categoria-texto">
+            Categoria B
+          </div>
+        </div>
+
+        <div class="seta">
+          <span>→</span>
+          <small>2 anos + 21 anos</small>
+        </div>
+
+        <div class="categoria">
+          <div class="icone-veiculo">🚌</div>
+          <div class="categoria-letra">D</div>
+          <div class="categoria-texto">
+            Categoria D
+          </div>
+        </div>
+
+        <div class="seta">
+          <span>→</span>
+          <small>1 ano</small>
+        </div>
+
+        <div class="categoria">
+          <div class="icone-veiculo">🚚</div>
+          <div class="categoria-letra">E</div>
+          <div class="categoria-texto">
+            Categoria E
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn-caminho" onclick="mostrarCaminho('d')">
+        Ver este caminho
+      </button>
+
+      <div class="explicacao" id="explicacao-d">
+        <strong>⚠️ Caminho B → D → E</strong>
+        <p>
+          Para chegar à D diretamente pela B, é necessário
+          ter pelo menos 21 anos e 2 anos de habilitação
+          na categoria B.
+        </p>
+
+        <p>
+          Se o condutor for oriundo da categoria B e quiser
+          passar posteriormente de D para E, a Resolução
+          CONTRAN nº 789/2020 estabelece pelo menos
+          1 ano de habilitação na categoria D.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- INTERAÇÃO FINAL -->
+  <div class="pergunta-caminhos">
+
+    <div class="pergunta-icone">🤔</div>
+
+    <h3>Você sabia dessa diferença?</h3>
+
+    <p>
+      Escolha uma opção:
+    </p>
+
+    <div class="botoes-resposta">
+
+      <button onclick="responderQuiz('sim')">
+        👍 Sim
+      </button>
+
+      <button onclick="responderQuiz('nao')">
+        😮 Não sabia
+      </button>
+
+    </div>
+
+    <div id="resposta-quiz"></div>
+
+  </div>
+
+
+  <!-- AVISO -->
+  <div class="aviso-legal">
+    <strong>ℹ️ Informação importante</strong>
+    <p>
+      Este conteúdo é educativo e apresenta os requisitos
+      de forma resumida. Os procedimentos podem envolver
+      outros requisitos legais, exames e condições.
+      Consulte o DETRAN e a legislação vigente antes de
+      iniciar um processo de mudança de categoria.
+    </p>
+  </div>
+
+</section>
+
+
+<style>
+
+/* =====================================================
+   ÁREA PRINCIPAL
+   ===================================================== */
+
+.caminhos-cnh {
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 35px 20px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.caminhos-titulo {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.caminhos-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #222;
+  color: #fff;
+}
+
+.caminhos-titulo h2 {
+  font-size: 32px;
+  margin: 14px 0 8px;
+}
+
+.caminhos-titulo p {
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+.caminhos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.caminho-card {
+  border-radius: 20px;
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.caminho-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+.caminho-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.caminho-header h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.numero-caminho {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+}
+
+.caminho-subtitulo {
+  margin-top: 8px;
+  opacity: .7;
+}
+
+
+/* =====================================================
+   LINHA DAS CATEGORIAS
+   ===================================================== */
+
+.linha-caminho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 30px 0;
+}
+
+.categoria {
+  text-align: center;
+  min-width: 70px;
+  transition: transform .4s ease;
+}
+
+.categoria:hover {
+  transform: scale(1.12);
+}
+
+.icone-veiculo {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.categoria-letra {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.categoria-texto {
+  font-size: 11px;
+  opacity: .65;
+}
+
+.seta {
+  text-align: center;
+  font-weight: bold;
+}
+
+.seta span {
+  display: block;
+  font-size: 25px;
+}
+
+.seta small {
+  display: block;
+  font-size: 9px;
+  white-space: nowrap;
+  opacity: .7;
+}
+
+
+/* =====================================================
+   BOTÃO
+   ===================================================== */
+
+.btn-caminho {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  transition: .25s;
+}
+
+.btn-caminho:hover {
+  transform: scale(1.02);
+  opacity: .9;
+}
+
+
+/* =====================================================
+   EXPLICAÇÃO
+   ===================================================== */
+
+.explicacao {
+  display: none;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  line-height: 1.5;
+  animation: aparecer .4s ease;
+}
+
+.explicacao.mostrar {
+  display: block;
+}
+
+.explicacao strong {
+  font-size: 16px;
+}
+
+.explicacao p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   PERGUNTA
+   ===================================================== */
+
+.pergunta-caminhos {
+  margin-top: 35px;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 20px;
+  background: #f5f5f5;
+}
+
+.pergunta-icone {
+  font-size: 40px;
+}
+
+.pergunta-caminhos h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.botoes-resposta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.botoes-resposta button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .25s;
+}
+
+.botoes-resposta button:hover {
+  transform: translateY(-2px);
+}
+
+#resposta-quiz {
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   AVISO LEGAL
+   ===================================================== */
+
+.aviso-legal {
+  margin-top: 25px;
+  padding: 18px;
+  border-left: 4px solid #777;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.aviso-legal strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.aviso-legal p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: .75;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO
+   ===================================================== */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.caminho-card.animar .categoria {
+  animation: pulsar 1.2s ease;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 750px) {
+
+  .caminhos-cnh {
+    padding: 25px 12px;
+  }
+
+  .caminhos-titulo h2 {
+    font-size: 25px;
+  }
+
+  .caminhos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .caminho-card {
+    padding: 20px 14px;
+  }
+
+  .linha-caminho {
+    gap: 3px;
+  }
+
+  .categoria {
+    min-width: 52px;
+  }
+
+  .icone-veiculo {
+    font-size: 26px;
+  }
+
+  .categoria-letra {
+    font-size: 25px;
+  }
+
+  .categoria-texto {
+    font-size: 9px;
+  }
+
+  .seta span {
+    font-size: 20px;
+  }
+
+  .seta small {
+    font-size: 8px;
+  }
+
+  .botoes-resposta {
+    flex-direction: column;
+  }
+
+  .botoes-resposta button {
+    width: 100%;
+  }
+}
+
+</style>
+
+
+<script>
+
+/* =====================================================
+   MOSTRAR CAMINHO
+   ===================================================== */
+
+function mostrarCaminho(caminho) {
+
+  document.querySelectorAll(".explicacao")
+    .forEach(function(item) {
+      item.classList.remove("mostrar");
+    });
+
+  document.querySelectorAll(".caminho-card")
+    .forEach(function(card) {
+      card.classList.remove("animar");
+    });
+
+  const explicacao =
+    document.getElementById("explicacao-" + caminho);
+
+  explicacao.classList.add("mostrar");
+
+  const card = explicacao.closest(".caminho-card");
+
+  card.classList.add("animar");
+
+  setTimeout(function() {
+    card.classList.remove("animar");
+  }, 1200);
+
+  explicacao.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+
+/* =====================================================
+   PERGUNTA INTERATIVA
+   ===================================================== */
+
+function responderQuiz(resposta) {
+
+  const resultado =
+    document.getElementById("resposta-quiz");
+
+  if (resposta === "sim") {
+
+    resultado.innerHTML =
+      "👏 Então você já conhecia essa diferença!";
+
+  } else {
+
+    resultado.innerHTML =
+      "😮 Agora você já sabe: quando o condutor é oriundo da B e vai de D para E, existe o requisito de pelo menos 1 ano na categoria D.";
+
+  }
+
+}
+
+  </script>
       </div>
     </section>
 
