@@ -477,6 +477,619 @@ III) Para as categorias “D” e “E”, ter pelo menos 21 anos (vinte e um an
       iniciar um processo de mudança de categoria.
     </p>
   </div>
+  <!-- =========================================================
+     ANIMAÇÃO - O MITO DA CATEGORIA D
+     B → C → E  x  B → D → E
+     ========================================================= -->
+
+<section id="animacao-cnh">
+
+  <div class="cnh-titulo">
+    <span>🚦 O MITO DA CATEGORIA D</span>
+    <h2>Dois caminhos para chegar à Categoria E</h2>
+    <p>Veja de forma simples os requisitos de cada caminho.</p>
+  </div>
+
+  <!-- BOTÕES -->
+  <div class="cnh-botoes">
+    <button id="btnC" class="cnh-btn ativo" onclick="mostrarCaminho('C')">
+      🚛 B → C → E
+    </button>
+
+    <button id="btnD" class="cnh-btn" onclick="mostrarCaminho('D')">
+      🚌 B → D → E
+    </button>
+  </div>
+
+  <!-- CAMINHO B C E -->
+  <div id="caminhoC" class="caminho">
+
+    <div class="linha-cnh">
+
+      <div class="categoria">
+        <div class="icone">🚗</div>
+        <strong>B</strong>
+        <small>Categoria B</small>
+      </div>
+
+      <div class="seta">
+        <span>→</span>
+        <small>mín. 1 ano</small>
+      </div>
+
+      <div class="categoria destaque-c">
+        <div class="icone">🚛</div>
+        <strong>C</strong>
+        <small>Categoria C</small>
+      </div>
+
+      <div class="seta">
+        <span>→</span>
+        <small>mín. 1 ano</small>
+      </div>
+
+      <div class="categoria destaque-e">
+        <div class="icone">🚚</div>
+        <strong>E</strong>
+        <small>Categoria E</small>
+      </div>
+
+    </div>
+
+    <div class="explicacao">
+      <h3>🚛 Caminho B → C → E</h3>
+
+      <p>
+        Para iniciar a mudança de <strong>B para C</strong>,
+        é necessário estar habilitado há pelo menos
+        <strong>1 ano na categoria B</strong>.
+      </p>
+
+      <p>
+        Para passar de <strong>C para E</strong>,
+        é necessário estar habilitado há pelo menos
+        <strong>1 ano na categoria C</strong>.
+      </p>
+
+      <div class="total">
+        ⏱️ Tempo mínimo entre as etapas: <strong>2 anos</strong>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- CAMINHO B D E -->
+  <div id="caminhoD" class="caminho escondido">
+
+    <div class="linha-cnh">
+
+      <div class="categoria">
+        <div class="icone">🚗</div>
+        <strong>B</strong>
+        <small>Categoria B</small>
+      </div>
+
+      <div class="seta">
+        <span>→</span>
+        <small>mín. 2 anos<br>+ 21 anos</small>
+      </div>
+
+      <div class="categoria destaque-d">
+        <div class="icone">🚌</div>
+        <strong>D</strong>
+        <small>Categoria D</small>
+      </div>
+
+      <div class="seta">
+        <span>→</span>
+        <small>requisitos da E</small>
+      </div>
+
+      <div class="categoria destaque-e">
+        <div class="icone">🚚</div>
+        <strong>E</strong>
+        <small>Categoria E</small>
+      </div>
+
+    </div>
+
+    <div class="explicacao">
+
+      <h3>🚌 Caminho B → D → E</h3>
+
+      <p>
+        Para iniciar a mudança de <strong>B para D</strong>,
+        é necessário ter pelo menos <strong>21 anos</strong>
+        e estar habilitado há pelo menos
+        <strong>2 anos na categoria B</strong>.
+      </p>
+
+      <p>
+        Para chegar à <strong>categoria E</strong> por esse caminho,
+        é necessário observar os requisitos legais aplicáveis
+        à categoria E.
+      </p>
+
+      <div class="alerta">
+        ⚠️ A regra atual não estabelece simplesmente
+        “1 ano na categoria D” como requisito para E.
+        O requisito legal para E é estar habilitado há pelo menos
+        <strong>1 ano na categoria C</strong>.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- COMPARAÇÃO -->
+  <div class="comparacao">
+
+    <h3>📊 O que muda entre os caminhos?</h3>
+
+    <div class="comparacao-grid">
+
+      <div class="comparacao-card">
+        <div class="comparacao-icone">🚛</div>
+
+        <h4>B → C → E</h4>
+
+        <p>
+          Passa primeiro pela categoria C,
+          voltada aos veículos abrangidos por essa categoria,
+          antes de chegar à E.
+        </p>
+
+        <strong>1 ano em B + 1 ano em C</strong>
+      </div>
+
+
+      <div class="comparacao-card">
+        <div class="comparacao-icone">🚌</div>
+
+        <h4>B → D → E</h4>
+
+        <p>
+          Passa primeiro pela categoria D,
+          que exige idade mínima de 21 anos e
+          pelo menos 2 anos na categoria B.
+        </p>
+
+        <strong>2 anos em B + 21 anos</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TRANSPORTE DE CARGAS -->
+  <div class="cargas">
+
+    <div class="cargas-icone">🚛</div>
+
+    <h3>E para transporte de cargas</h3>
+
+    <p>
+      Se o objetivo é trabalhar principalmente com
+      <strong>transporte de cargas</strong>, a categoria C
+      aparece como uma etapa importante na formação do condutor,
+      especialmente porque a legislação exige período mínimo
+      na categoria C para a mudança para E.
+    </p>
+
+    <div class="destaque-final">
+      <strong>💡 Informação importante</strong>
+
+      <p>
+        A categoria E não pode ser obtida diretamente a partir
+        da categoria B. Para a mudança para E, a legislação vigente
+        exige, entre outros requisitos, pelo menos
+        <strong>1 ano de habilitação na categoria C</strong>.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="fonte-cnh">
+    Fonte: Código de Trânsito Brasileiro e Resolução CONTRAN nº 1.020/2025.
+    <br>
+    Consulte o DETRAN do seu estado antes de iniciar o processo.
+  </div>
+
+</section>
+
+
+<style>
+
+/* ==============================
+   ANIMAÇÃO CNH
+   ============================== */
+
+#animacao-cnh {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #f7f7f7, #ffffff);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#animacao-cnh * {
+  box-sizing: border-box;
+}
+
+.cnh-titulo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cnh-titulo span {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cnh-titulo h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.cnh-titulo p {
+  margin: 0;
+  color: #666;
+}
+
+
+/* BOTÕES */
+
+.cnh-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.cnh-btn {
+  border: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #e5e5e5;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.cnh-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cnh-btn.ativo {
+  background: #222;
+  color: white;
+}
+
+
+/* CAMINHO */
+
+.caminho {
+  animation: aparecerCnh 0.5s ease;
+}
+
+.escondido {
+  display: none;
+}
+
+@keyframes aparecerCnh {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* LINHA */
+
+.linha-cnh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+
+/* CATEGORIA */
+
+.categoria {
+  width: 130px;
+  min-height: 130px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.4s;
+}
+
+.categoria:hover {
+  transform: scale(1.06);
+}
+
+.categoria .icone {
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+
+.categoria strong {
+  font-size: 28px;
+}
+
+.categoria small {
+  color: #666;
+}
+
+
+/* DESTAQUES */
+
+.destaque-c {
+  border-color: #777;
+}
+
+.destaque-d {
+  border-color: #777;
+  animation: pulsarD 2s infinite;
+}
+
+.destaque-e {
+  border-color: #222;
+}
+
+@keyframes pulsarD {
+
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+}
+
+
+/* SETAS */
+
+.seta {
+  text-align: center;
+  font-weight: bold;
+}
+
+.seta span {
+  display: block;
+  font-size: 35px;
+}
+
+.seta small {
+  display: block;
+  color: #666;
+  font-size: 11px;
+  max-width: 100px;
+}
+
+
+/* EXPLICAÇÃO */
+
+.explicacao {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 16px;
+  background: #f1f1f1;
+}
+
+.explicacao h3 {
+  margin-top: 0;
+}
+
+.explicacao p {
+  line-height: 1.6;
+}
+
+.total {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  font-size: 17px;
+}
+
+
+/* ALERTA */
+
+.alerta {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff3cd;
+  border-left: 5px solid #d39e00;
+  line-height: 1.5;
+}
+
+
+/* COMPARAÇÃO */
+
+.comparacao {
+  margin-top: 35px;
+}
+
+.comparacao h3 {
+  text-align: center;
+}
+
+.comparacao-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.comparacao-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.comparacao-card h4 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.comparacao-card p {
+  line-height: 1.5;
+}
+
+.comparacao-icone {
+  font-size: 35px;
+}
+
+
+/* CARGAS */
+
+.cargas {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.cargas-icone {
+  font-size: 45px;
+}
+
+.cargas h3 {
+  font-size: 24px;
+}
+
+.cargas p {
+  line-height: 1.6;
+}
+
+.destaque-final {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+}
+
+.destaque-final p {
+  margin-bottom: 0;
+}
+
+
+/* FONTE */
+
+.fonte-cnh {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.5;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+  #animacao-cnh {
+    margin: 20px 10px;
+    padding: 18px;
+  }
+
+  .cnh-titulo h2 {
+    font-size: 23px;
+  }
+
+  .linha-cnh {
+    flex-direction: column;
+  }
+
+  .seta span {
+    transform: rotate(90deg);
+  }
+
+  .categoria {
+    width: 150px;
+    min-height: 120px;
+  }
+
+  .comparacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cnh-btn {
+    width: 100%;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+function mostrarCaminho(caminho) {
+
+  const caminhoC = document.getElementById("caminhoC");
+  const caminhoD = document.getElementById("caminhoD");
+
+  const btnC = document.getElementById("btnC");
+  const btnD = document.getElementById("btnD");
+
+
+  if (caminho === "C") {
+
+    caminhoC.classList.remove("escondido");
+    caminhoD.classList.add("escondido");
+
+    btnC.classList.add("ativo");
+    btnD.classList.remove("ativo");
+
+  }
+
+
+  if (caminho === "D") {
+
+    caminhoD.classList.remove("escondido");
+    caminhoC.classList.add("escondido");
+
+    btnD.classList.add("ativo");
+    btnC.classList.remove("ativo");
+
+  }
+
+}
+
+</script>
 
 </section>
 
