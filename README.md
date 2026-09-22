@@ -1,19 +1,18 @@
-<div align="center">
-  <img src="./logo.png" alt="O Mito da Categoria D" width="400">
-</div>
-  ## Hi there 👋
+# Mito da Categoria D
 
-<!--
-**Mitodacategoriad/Mitodacategoriad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Projeto independente de informação, reflexão e valorização da **Categoria C** e dos profissionais do transporte.
 
-Here are some ideas to get you started:
+## Site
+https://www.mitodacategoriad.com.br/
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Estrutura
+- `index.html` — página principal
+- `pages/` — páginas complementares
+- `assets/css/` — folhas de estilo
+- `assets/js/` — JavaScript do site
+- `assets/img/` — imagens e identidade visual
+- `docs/` — eBook e arquivos de apoio
+- `CNAME` — domínio personalizado do GitHub Pages
+
+## Observação
+O site é um projeto informativo e não substitui orientações do DETRAN, SENATRAN, CONTRAN, legislação vigente ou profissionais habilitados.
