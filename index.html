@@ -3353,6 +3353,57 @@ function reiniciarQuiz() {
 
           </div>
         </div>
+      <!-- Estilização do Botão -->
+<style>
+  .btn-radio {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366; /* Cor verde chamativa */
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-radio:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .btn-radio svg {
+    margin-right: 10px;
+    fill: white;
+  }
+</style>
+
+<!-- O Botão com Script para abrir em Pop-up -->
+<button class="btn-radio" onclick="abrirRadio()">
+  <!-- Ícone de Play (SVG) -->
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M8 5v14l11-7z"/>
+  </svg>
+  Ouvir Rádio Gospel Adoração
+</button>
+
+<script>
+  function abrirRadio() {
+    // Abre o link da rádio em uma janela menor separada
+    window.open(
+      "https://www.radio-ao-vivo.com/radio-gospel-adoracao", 
+      "RadioGospel", 
+      "width=400,height=600,scrollbars=no,resizable=no"
+    );
+  }
+</script>
+
       </div>
     </section>
   </main>
