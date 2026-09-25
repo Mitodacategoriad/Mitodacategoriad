@@ -410,3 +410,10 @@ footer small{color:#777}
     display: block;
     margin: 0 auto;
 }
+@media (max-width: 480px) {
+    .logo-site {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+}
