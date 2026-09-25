@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./logo.png" alt="O Mito da Categoria D" width="400">
+  <img src="./logo.png" alt="O Mito da Categoria D" width="300">
 </div>
   ## Hi there 👋
 
