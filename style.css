@@ -402,3 +402,11 @@ footer small{color:#777}
     padding: 24px;
   }
 }
+/* ===== LOGO DO SITE ===== */
+.logo-site {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
