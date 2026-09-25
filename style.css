@@ -402,33 +402,3 @@ footer small{color:#777}
     padding: 24px;
   }
 }
-/* ===== LOGO DO SITE ===== */
-.logo-site {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-@media (max-width: 480px) {
-    .logo-site {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-    }
-}
-/* ===== IMAGEM DO TOPO ===== */
-.logo-site {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-@media (max-width: 480px) {
-    .logo-site {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-}
