@@ -401,4 +401,25 @@ footer small{color:#777}
   .saude-mental .mental-help {
     padding: 24px;
   }
+    .voltar-inicio {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.voltar-inicio a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #d71920;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.voltar-inicio a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 }
